@@ -8,25 +8,45 @@
     <title>Document</title>
     <link rel="stylesheet" href="/assets/styles.css">
 </head>
-<body class="justify-content-center">
-    <h1>Piensa en un numero del 1 al 100</h1>
-    <div class="row justify-content-center">
-        <div class="col">
-
-            <button id="submit" type="button" class="btn btn-outline-info col-sm-3 col-3" onclick="preguntar(), mostrar(), deshabilitar(this)">Iniciar</button>
+<body>
+    <!--intro-->
+    <div id="intro" class="container justify-content-center text-center mt-5">
+        <h1>Piensa en un numero del 1 al 100</h1>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <button id="submit" type="button" class="btn btn-outline-info" onclick="preguntar(), mostrar('botones'), deshabilitar(this), ocultar('intro')">Iniciar</button>
+            </div>
+            <div class="col"></div>
         </div>
     </div>
-    <div class="row">
-        <h2 id="pregunta"></h2>
-    </div>
-    <div class="row">
-        <div class="col-sm-3">
-            <button id="ese" type="button" class="btn btn-primary btn-lg" onclick="encontrado()">Ese es!</button>
-            <button id="si" type="button" class="btn btn-outline-success" onclick="generar('si')">Mayor</button>
-            <button id="no" type="button" class="btn btn-outline-danger" onclick="generar('no')">Menor</button>
+    
+    <!--la pregunta-->
+    <div class="container justify-content-center text-center mt-5">
+        <div class="row">
+            <h2 id="pregunta"></h2>
+        </div>
+        <div id="botones" class="row">
+            <div class="col"></div>
+            <div class="col">
+                <button  type="button" class="btn btn-primary btn-lg" onclick="encontrado()">Ese es!</button>
+                <button  type="button" class="btn btn-outline-success" onclick="generar('si')">Mayor</button>
+                <button  type="button" class="btn btn-outline-danger" onclick="generar('no')">Menor</button>
+            </div>
+            <div class="col"></div>
         </div>
     </div>
-
+    
+    <div class="container justify-content-center text-center mt-1">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <button id="restart" type="button" class="btn btn-outline-info" onclick="">Reiniciar</button>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+        
     <script src="/assets/js.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
