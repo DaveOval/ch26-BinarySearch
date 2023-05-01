@@ -11,11 +11,11 @@ function mostrar(ref){
 function ocultar(ref){
     document.getElementById(ref).style.display = 'none';
 };
-function deshabilitar(refObj){
+/* function deshabilitar(refObj){
     console.log(`"${document.getElementById(refObj.id).id}" button has been disabled`);
     document.getElementById(refObj.id).disabled = true;
+}; */
 
-};
 function preguntar(){
     document.getElementById('pregunta').innerText = `Tu número es el ${guess}?`;
 };
@@ -61,4 +61,10 @@ function restart(){
     guess = 50;
     max = 100;
     min = 1;
+
+    mostrar('intro');
+    mostrar('submit');
+    ocultar('restart');
+    
+    document.getElementById('pregunta').innerText = " ";
 }
